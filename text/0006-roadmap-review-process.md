@@ -1,5 +1,5 @@
 ---
-title: Architecture Review Process
+title: Roadmap Review Process
 layout: text
 ---
 
@@ -7,27 +7,23 @@ layout: text
 
 **Warning**: This document is incomplete. We've added it to the repo before it's finished because we would like a couple of trial runs before we say we're happy, and we would like something to refer to during those reviews.
 
-# Architecture Review Process
+# Roadmap Review Process
 
 ## Introduction
 
-Architectural Reviews within the Firefox organization fall into two categories: "Roadmap" and "Design".
+Architectural Reviews within the Firefox organization fall into two categories: "Roadmap" and "Design". This documents the Roadmap Review process. The Design Review process is [documented separately](0007-design-review-process.md).
+
+The function of a Roadmap Review is to decide if a thing should be done. The goal is to bring together a packet of data to inform a management decision to provide resources to make the thing happen. A Roadmap Review should happen early in the process so that build time isn’t wasted on a "No" decision, but so that enough information is available to management.
 
 Product Reviews are not within the scope of this process. This process is about architectural change, which should ultimately be in support of product features, but will generally have an effect on multiple product features. Architectural change can be growing new capabilities or in reducing large-scale technical debt.
 
-The function of a **Roadmap Review** is to decide if a thing should be done. The goal is to bring together a packet of data to inform a management decision to provide resources to make the thing happen. A Roadmap Review should happen early in the process so that build time isn’t wasted on a "No" decision, but so that enough information is available to management.
-
-A **Design Review** is to decide if the thing should be done in a particular way. The goal is to ensure that the problem space is understood well enough that a realistic bug breakdown can be made, that those working on the problem all agree on the challenge, and that work can be prioritized to hit the hardest parts of the problem first (in order to get early warning if the hard parts prove impossible or to inform schedule projections early).
-
 ## Timetable
 
-For both a Roadmap Review and a Design Review the **timetable** is as follows:
+The **timetable** is as follows:
 
 1. The team should set the stage (see "initial meeting" below):
   * Summarize in a one or two sentences the proposal to be reviewed. This should be agreed between the team asking for review and the chair.
-  * Find someone to **chair** the review:
-    - For a Roadmap Review this will be the least senior manager with the ability to address the problem in its entirety.
-    - For a Design Review this will be an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs. The principle is to get the most informed and least biased feedback possible.
+  * Find someone to **chair** the review this will be the least senior manager with the ability to address the problem in its entirety.
 
 2. The team produces a **Review Packet** designed to document the proposal identified in step 1. The production of the Review Packet is expected to be collaborative and iterative to ensure that the review focuses on the key issues so the team presents its best case. This is particularly true of a Roadmap Review where the consequences of the review are likely to be more significant.
 The Review Packet includes:
@@ -73,7 +69,7 @@ For both a Roadmap Review and a Design Review the goal is to hear perspectives t
 
 The first two considerations define the goals of the review process and are two sides of the same coin.
 
-The audience of a Roadmap Review is those "up the chain" of decision makers and the audience of a Design Review is those running “down the chain” of implementors.
+The audience of a Roadmap Review is those "up the chain" of decision makers.
 
 In [RACI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix) terms, the team is Responsible, the chair is Accountable, other senior engineers or managers are Consulted and various others in the organization are Informed.
 
@@ -85,15 +81,6 @@ A Roadmap Review should focus on:
 * Opportunity cost
 
 The key outcome is firstly, senior management investing in the problem space and building consensus around a shared reality. Secondly, to provide documentation of both the goals and assumptions of the project to aid later evaluation.
-
-A Design Review should focus on:
-
-* The solution space
-* Technical roadmaps
-* Milestones and timelines
-* Resource allocation
-
-The key outcome for middle management is to understand the value proposition and the path to success. The key outcome for engineers is firstly to understand the design constraints and the tradeoffs between them, which is important to avoid unnecessary re-work when implementation reality causes a re-think. Secondly, to provide a proposal detailed enough to begin an initial breakdown of engineering work for the proposal (although the work implied by the proposal should not be filed prior to the completion of the review).
 
 ### Structure and Inputs
 
@@ -117,7 +104,7 @@ The chair then evaluates and refines the team’s document with the assistance o
 
 Involving the team and the chair informally and subsequently sharing ownership of a document is designed to seed a collaborative process. A particular benefit is avoiding drift between the proposal and the focus of the review.
 
-An Architecture Review process can be formally mandated. This may work in environments with a large degree of formality and process. This isn't how Mozilla works. For an Architecture Review process to be successful at Mozilla it must be beneficial to the team undergoing review.
+A review process can be formally mandated. This may work in environments with a large degree of formality and process. This isn't how Mozilla works. For a review process to be successful at Mozilla it must be beneficial to the team undergoing review.
 
 The primary informal output of a review should be learning. It is expected that go/no-go decisions will be the result of additional learning rather than the team seeing a 'no-go' as something that needs fighting. Imposed decisions may be required, but learning is a preferred outcome.
 
